@@ -20,8 +20,7 @@
 
 ## Setup
 
-Install dependencies with `npm install`.
-Clone this repo for the [scheduler-api](https://github.com/davincecode/scheduler-api) repository
+1. Install dependencies with `npm install` in the root folder.
 
 ## Running Webpack Development Server
 
