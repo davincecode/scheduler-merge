@@ -20,25 +20,34 @@
 
 ## Setup
 
-1. Install dependencies with `npm install` in the root folder.
+- Install dependencies with `npm install` in the root folder.
+- It will automatically install modules into sub folders.
 
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
+## Please note: Run the app in the root folder
 
 ```sh
-npm test
+npm run dev
 ```
 
-## Running Storybook Visual Testbed
+## Scheduler API
+
+Use the psql -U development command to login to the PostgreSQL server with the username development and the password development. This command MUST be run in a vagrant terminal, we are using the PostgreSQL installation provided in the vagrant environment.
+
+Create a database with the command CREATE DATABASE scheduler_development;.
+
+Copy the .env.example file to .env.development and fill in the necessary PostgreSQL configuration. The node-postgres library uses these environment variables by default.
 
 ```sh
-npm run storybook
+PGHOST=localhost
+PGUSER=development
+PGDATABASE=scheduler_development
+PGPASSWORD=development
+PGPORT=5432
 ```
+
+## Scheduler
+
+Create .env and add `SKIP_PREFLIGHT_CHECK=true` if error `npm run client exited with code 1` occurs.
 
 ## Dev Dependencies
 
