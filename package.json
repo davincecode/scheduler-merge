@@ -1,0 +1,19 @@
+{
+  "name": "scheduler-app-merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scheduler-api/src/index.js",
+		"server": "nodemon scheduler-api/src/index.js",
+    "client": "npm start --prefix scheduler",
+    "dev": "concurrently -n 'server,client' \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
